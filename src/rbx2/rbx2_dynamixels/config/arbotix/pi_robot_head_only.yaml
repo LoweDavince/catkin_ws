@@ -1,0 +1,18 @@
+port: /dev/ttyUSB0
+baud: 1000000
+rate: 100
+sync_write: True
+sync_read: False
+read_rate: 100
+write_rate: 100
+
+joints: {
+    id9_controller: {id: 9 ,ticks: 4096, neutral: 2048, min_angle: -145, max_angle: 145},
+    id12_controller: {id: 12 ,ticks: 4096, neutral: 2048, min_angle: -145, max_angle: 145},
+    id2_controller: {id: 2 ,ticks: 4096, neutral: 2048, min_angle: -145, max_angle: 145},
+    id5_controller: {id: 5 ,ticks: 4096, neutral: 2048, min_angle: -145, max_angle: 145},
+}
+
+controllers: {
+   head_controller: {onboard: False, action_name: head_controller/follow_joint_trajectory, type: follow_controller, joints: [id9_controller, id12_controller,id5_controller, id2_controller]}
+}

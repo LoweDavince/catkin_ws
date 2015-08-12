@@ -1,0 +1,29 @@
+{
+	"folders":
+	[
+		{
+			"path": "src"
+		}
+	],
+	"settings":
+	{
+		// "sublimeclang_enabled": false,
+		"sublimeclang_options":
+		[
+			"-std=gnu++11",
+	        "-isystem", "/usr/include",
+	        "-isystem", "/usr/include/c++/*",
+	        "-isystem", "/usr/include/c++/4.8",
+	        "-isystem", "/usr/include/c++/4.8/*",
+	        "-isystem", "/usr/include/boost",
+	        "-isystem", "/usr/include/boost/**",
+	        "-isystem", "/usr/include/python2.7",
+	        "-isystem", "/usr/include/python2.7/*",
+	        "-isystem", "/usr/include/python2.7/**",
+	        "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/4.8/include",
+	        "-isystem", "/usr/lib/gcc/x86_64-linux-gnu/4.8/include/*",
+          "-isystem", "/opt/ros/hydro/include", 
+			"-I${folder:${project_path:main.cpp}}"
+		]
+	}
+}
